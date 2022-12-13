@@ -3,16 +3,25 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class FirstApplication {
+public class First1Application extends SpringBootServletInitializer{
 
-	public static void main(String[] args) {
-		SpringApplication.run(FirstApplication.class, args);
-	}
 	
-	 protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-	      return builder.sources(First1Application.class);
-	  }
+	 @Override
+	    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	        return application.sources(First1Application.class);
+	    }
+	
+	public static void main(String[] args) {
+		SpringApplication.run(First1Application.class, args);
+	}
 
+	 
 }
